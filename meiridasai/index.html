@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日大赛主题大赛寸止挑战在线观看-寸止挑战大赛主题_每日大赛在线观看入口</title>
+<meta name="description" content="每日大赛主题大赛寸止挑战在线观看页面，汇总每日大赛主题大赛寸止挑战的观看入口、主题分类、热门挑战与观看须知，帮助观众快速找到每日大赛主题大赛寸止挑战在线观看内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316131f'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23ffd166' stroke-width='4'/%3E%3Cpath d='M32 22v10l7 5' stroke='%23ff6b6b' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#12101a;
+  --bg2:#1a1725;
+  --card:#211d30;
+  --line:#332c48;
+  --ink:#f3efff;
+  --ink2:#b9b1cf;
+  --gold:#ffd166;
+  --red:#ff6b6b;
+  --teal:#5ad1c4;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* header */
+header.site{
+  position:sticky;top:0;z-index:20;
+  background:rgba(18,16,26,.92);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(8px);
+}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;max-width:1120px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;min-width:0}
+.logo svg{flex:none}
+.logo .brand{
+  font-size:15px;font-weight:700;letter-spacing:.2px;
+  color:var(--ink);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+nav.main{display:flex;gap:4px;flex-wrap:wrap}
+nav.main a{
+  font-size:14px;color:var(--ink2);padding:6px 10px;border-radius:8px;white-space:nowrap;
+}
+nav.main a:hover,nav.main a:focus-visible{color:var(--ink);background:var(--bg2)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;font-size:14px;cursor:pointer}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:radial-gradient(900px 420px at 82% -10%,rgba(255,107,107,.18),transparent 60%),
+             radial-gradient(700px 380px at 8% 0%,rgba(90,209,196,.14),transparent 60%),
+             var(--bg2);
+}
+.hero .wrap{display:grid;grid-template-columns:1.35fr .9fr;gap:36px;padding-top:52px;padding-bottom:52px;align-items:center}
+h1{
+  font-size:clamp(24px,3.6vw,38px);
+  line-height:1.35;margin:0 0 16px;font-weight:800;letter-spacing:.3px;
+}
+h1 .hl{
+  background:linear-gradient(transparent 62%,rgba(255,209,102,.35) 62%);
+}
+.hero p.lead{color:var(--ink2);margin:0 0 22px;font-size:15px;max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 20px;border-radius:12px;font-weight:700;font-size:15px;
+  border:1px solid transparent;
+}
+.btn-primary{background:var(--gold);color:#1b1626}
+.btn-primary:hover{filter:brightness(1.06)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{background:var(--card)}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art svg{width:100%;max-width:330px;height:auto}
+
+/* section */
+section{padding:52px 0}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+h2{font-size:clamp(19px,2.2vw,24px);margin:0;font-weight:800;letter-spacing:.3px}
+.sec-head .note{color:var(--ink2);font-size:13.5px}
+
+/* cards */
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px;
+}
+.card h3{margin:0 0 8px;font-size:16.5px;font-weight:700}
+.card p{margin:0;color:var(--ink2);font-size:14.5px}
+.tag{
+  display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;
+  border:1px solid var(--line);color:var(--teal);margin-bottom:10px;
+}
+.tag.red{color:var(--red)}
+.tag.gold{color:var(--gold)}
+
+/* list rows */
+.rows{display:grid;gap:12px}
+.row{
+  display:grid;grid-template-columns:46px 1fr auto;gap:14px;align-items:center;
+  background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px 16px;
+}
+.row .no{
+  font-weight:800;font-size:18px;color:var(--gold);
+  font-variant-numeric:tabular-nums;text-align:center;
+}
+.row .t{font-weight:700;font-size:15px}
+.row .d{color:var(--ink2);font-size:13.5px}
+.row .go{font-size:13px;color:var(--teal);white-space:nowrap}
+
+/* prose */
+.prose{max-width:44em}
+.prose h2{margin-bottom:14px}
+.prose p{margin:0 0 14px;color:var(--ink2);font-size:15px}
+.prose strong{color:var(--ink)}
+
+/* filter bar */
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.tools input,.tools select{
+  background:var(--bg2);border:1px solid var(--line);color:var(--ink);
+  border-radius:10px;padding:9px 12px;font-size:14px;font-family:inherit;
+}
+.tools input{flex:1;min-width:180px}
+.tools input:focus,.tools select:focus{outline:2px solid rgba(255,209,102,.5);outline-offset:1px}
+.empty{color:var(--ink2);font-size:14px;padding:8px 0}
+
+/* download */
+.dl{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  background:linear-gradient(120deg,#262038,#1b1730);
+  border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+}
+.dl p{margin:6px 0 0;color:var(--ink2);font-size:14px}
+.btn-dl{
+  background:var(--gold);color:#1b1626;border-radius:12px;padding:11px 22px;font-weight:800;
+  pointer-events:none;opacity:.92;
+}
+
+/* footer */
+footer.site{border-top:1px solid var(--line);padding:30px 0;background:var(--bg2)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .f-brand{font-weight:700;font-size:14px}
+footer .f-note{color:var(--ink2);font-size:13px}
+footer nav{display:flex;gap:14px;flex-wrap:wrap}
+footer nav a{font-size:13px;color:var(--ink2)}
+footer nav a:hover{color:var(--ink)}
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:36px;padding-bottom:36px;gap:26px}
+  .hero-art{order:-1}
+  .hero-art svg{max-width:190px}
+  .g3{grid-template-columns:1fr}
+  .g2{grid-template-columns:1fr}
+  nav.main{display:none}
+  nav.main.open{display:flex;position:absolute;left:0;right:0;top:100%;background:var(--bg2);border-bottom:1px solid var(--line);padding:10px 16px;flex-direction:column;gap:2px}
+  .bar{position:relative}
+  .menu-btn{display:inline-block}
+  .logo .brand{font-size:13.5px;white-space:normal;line-height:1.4}
+  .row{grid-template-columns:38px 1fr;gap:10px}
+  .row .go{grid-column:2;justify-self:start}
+  section{padding:38px 0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="bar">
+    <div class="logo">
+      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#211d30" stroke="#332c48"/>
+        <circle cx="32" cy="32" r="15" fill="none" stroke="#ffd166" stroke-width="4"/>
+        <path d="M32 23v9l6 4" stroke="#ff6b6b" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand">每日大赛主题大赛寸止挑战在线观看</span>
+    </div>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav">导航</button>
+    <nav class="main" id="mainnav" aria-label="主导航">
+      <a href="#today">今日主题</a>
+      <a href="#watch">观看入口</a>
+      <a href="#cats">主题分类</a>
+      <a href="#guide">观看须知</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1><span class="hl">每日大赛主题大赛寸止挑战在线观看</span></h1>
+      <p class="lead">按天更新的主题挑战观看页：每天一个主题方向，围绕寸止挑战的节奏控制与耐力表现展开。这里集中呈现当日主题、可观看的挑战条目与观看须知，方便你直接找到每日大赛主题大赛寸止挑战在线观看的入口。</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#watch">进入观看入口</a>
+        <a class="btn btn-ghost" href="#today">查看今日主题</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 320 300" role="presentation">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff6b6b" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#ffd166" stop-opacity=".85"/>
+          </linearGradient>
+        </defs>
+        <circle cx="160" cy="150" r="112" fill="none" stroke="#332c48" stroke-width="2"/>
+        <circle cx="160" cy="150" r="84" fill="none" stroke="#332c48" stroke-width="2"/>
+        <circle cx="160" cy="150" r="56" fill="#1a1725" stroke="#332c48" stroke-width="2"/>
+        <circle cx="160" cy="150" r="40" fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-dasharray="180 90" transform="rotate(-90 160 150)"/>
+        <path d="M160 118v32l20 13" stroke="#ffd166" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="160" cy="150" r="4" fill="#ff6b6b"/>
+        <g fill="#5ad1c4">
+          <rect x="30" y="138" width="10" height="24" rx="5"/>
+          <rect x="48" y="126" width="10" height="48" rx="5"/>
+          <rect x="262" y="130" width="10" height="40" rx="5"/>
+          <rect x="280" y="142" width="10" height="16" rx="5"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section id="today">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>今日主题与挑战节奏</h2>
+      <span class="note">主题按天轮换，条目以页面列出的当期为限</span>
+    </div>
+    <div class="grid g3">
+      <article class="card">
+        <span class="tag gold">主题方向</span>
+        <h3>单一主题·集中呈现</h3>
+        <p>每天的每日大赛主题大赛寸止挑战围绕一个明确主题展开，观看时先看主题说明，再进入对应条目，能更快理解挑战的规则边界与节奏安排。</p>
+      </article>
+      <article class="card">
+        <span class="tag red">节奏要点</span>
+        <h3>寸止挑战的控制感</h3>
+        <p>寸止挑战重在节奏与停顿的控制，观看重点通常落在节奏切换的节点上。主题大赛把这类节点做成可对照的条目，便于横向比较不同表现的差异。</p>
+      </article>
+      <article class="card">
+        <span class="tag">观看方式</span>
+        <h3>在线观看·无需跳转</h3>
+        <p>页面内的观看入口直接指向当期条目，每日大赛主题大赛寸止挑战在线观看不依赖额外客户端，浏览器中即可打开，移动端同样可以正常浏览。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="watch" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>观看入口与条目筛选</h2>
+      <span class="note">输入主题词或选择分类，列表即时收窄</span>
+    </div>
+    <div class="tools">
+      <input id="q" type="search" placeholder="搜索主题，例如：节奏、耐力、主题" aria-label="搜索主题">
+      <select id="cat" aria-label="按分类筛选">
+        <option value="">全部分类</option>
+        <option value="主题">主题</option>
+        <option value="节奏">节奏</option>
+        <option value="耐力">耐力</option>
+      </select>
+    </div>
+    <div class="rows" id="list">
+      <a class="row" href="#watch" data-cat="主题" data-k="主题 当日 说明 寸止挑战">
+        <span class="no">01</span>
+        <span><span class="t">当日主题说明场</span><br><span class="d">先看主题设定与规则边界，再决定观看顺序，适合首次接触每日大赛主题大赛寸止挑战在线观看的观众。</span></span>
+        <span class="go">观看 →</span>
+      </a>
+      <a class="row" href="#watch" data-cat="节奏" data-k="节奏 切换 节点 寸止">
+        <span class="no">02</span>
+        <span><span class="t">节奏切换节点集</span><br><span class="d">把寸止挑战中的停顿与切换节点集中列出，方便对照同一主题下不同条目的节奏处理方式。</span></span>
+        <span class="go">观看 →</span>
+      </a>
+      <a class="row" href="#watch" data-cat="耐力" data-k="耐力 持续 表现 主题大赛">
+        <span class="no">03</span>
+        <span><span class="t">耐力表现观察场</span><br><span class="d">关注挑战过程中的持续表现，主题大赛的对照条目让不同时长下的稳定性更易被看清。</span></span>
+        <span class="go">观看 →</span>
+      </a>
+      <a class="row" href="#watch" data-cat="主题" data-k="主题 分类 合集 每日大赛">
+        <span class="no">04</span>
+        <span><span class="t">往期主题分类合集</span><br><span class="d">按主题归档的往期条目，适合想按兴趣方向浏览、而非只看当天的观众。</span></span>
+        <span class="go">观看 →</span>
+      </a>
+      <a class="row" href="#watch" data-cat="节奏" data-k="节奏 复盘 对照 寸止挑战">
+        <span class="no">05</span>
+        <span><span class="t">节奏复盘对照场</span><br><span class="d">同一主题的多条记录并列呈现，观看时可按顺序对照，理解寸止挑战的节奏变化。</span></span>
+        <span class="go">观看 →</span>
+      </a>
+    </div>
+    <p class="empty" id="empty" hidden>没有匹配的主题，换个关键词或切回全部分类试试。</p>
+  </div>
+</section>
+
+<section id="cats">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>主题分类与选择建议</h2>
+      <span class="note">按兴趣方向挑主题，效率更高</span>
+    </div>
+    <div class="grid g2">
+      <article class="card">
+        <h3>按主题方向挑</h3>
+        <p>主题大赛的分类以主题本身为线索，先确定想看的主题方向，再从该主题下的条目里选具体场次。每日大赛主题大赛寸止挑战在线观看的入口不做多层跳转，分类与列表在同一页面完成。</p>
+      </article>
+      <article class="card">
+        <h3>按观看时长挑</h3>
+        <p>如果时间有限，优先看节奏节点较集中的条目；时间充裕时，再看耐力表现类的完整记录。同一主题下两类条目可以互补，不必一次看完。</p>
+      </article>
+      <article class="card">
+        <h3>按熟悉程度挑</h3>
+        <p>新观众从主题说明场开始，理解寸止挑战的基本节奏后再看对照场；熟悉规则的观众可以直接进入节奏复盘与耐力观察条目，减少重复解释。</p>
+      </article>
+      <article class="card">
+        <h3>按更新节奏挑</h3>
+        <p>每日大赛的主题按天轮换，当天的主题条目会优先排在列表前部。想跟进当期内容的观众，直接看列表首项即可；想回溯往期的，用分类筛选。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="guide" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap prose">
+    <h2>观看须知与内容说明</h2>
+    <p>本页是<strong>每日大赛主题大赛寸止挑战在线观看</strong>的主题首页，承担的是观看入口与主题索引的作用。页面上的主题、分类与条目名称，均围绕寸止挑战的节奏控制与耐力表现来组织，不涉及与主题无关的内容。</p>
+    <p>关于更新：<strong>每日大赛</strong>以“日”为周期安排主题，当期主题排在列表靠前位置；往期条目按主题归档保留，便于按兴趣回溯。页面不承诺固定时长的更新间隔，具体以列表中实际呈现的条目为准。</p>
+    <p>关于观看：<strong>主题大赛</strong>的条目以在线观看为主，打开页面即可浏览，无需安装额外软件。移动端与桌面端的条目结构一致，列表在小屏上改为单列排列，文字说明紧随标题之后。</p>
+    <p>关于主题理解：<strong>寸止挑战</strong>的关键在于节奏的收与放，观看时留意停顿位置和切换节点，比只看结果更容易理解挑战的设计意图。若同一主题下有多条记录，建议按列表顺序观看，减少来回切换。</p>
+    <p>关于筛选：页面顶部的搜索框与分类下拉框都可直接使用，输入“节奏”“耐力”等词会立即收窄列表；清空输入并选回“全部分类”即可恢复完整列表。筛选只作用于当前页面已列出的条目。</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>常见问题</h2>
+      <span class="note">针对初次访问者的几个高频疑问</span>
+    </div>
+    <div class="grid g2">
+      <article class="card">
+        <h3>需要注册才能观看吗？</h3>
+        <p>页面本身不设置注册环节，条目以在线观看的方式呈现。若个别条目需要跳转到外部地址，以该条目实际打开后的页面说明为准。</p>
+      </article>
+      <article class="card">
+        <h3>每天的主题都会变吗？</h3>
+        <p>每日大赛的主题按天轮换，当天主题条目排在列表前部；往期主题按分类保留，可通过筛选回看，不必担心错过之后找不到入口。</p>
+      </article>
+      <article class="card">
+        <h3>手机上能正常看吗？</h3>
+        <p>可以。页面宽度适配视口，移动端导航收进菜单按钮，列表改为单列，标题与说明文字的行长和间距针对小屏做过调整。</p>
+      </article>
+      <article class="card">
+        <h3>搜索结果为空怎么办？</h3>
+        <p>先缩短关键词，或把分类切回“全部分类”。筛选只匹配本页已列出的主题条目，若仍为空，说明当期没有对应主题，可稍后再看。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="dl">
+      <div>
+        <h2 style="font-size:18px">主题素材包</h2>
+        <p>包含主题图标与页面配色说明，供个人整理观看清单时使用。</p>
+      </div>
+      <a class="btn-dl" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <div class="f-brand">每日大赛主题大赛寸止挑战在线观看</div>
+      <div class="f-note">主题索引与在线观看入口 · 内容以页面实际列出的条目为准</div>
+    </div>
+    <nav aria-label="页尾导航">
+      <a href="#today">今日主题</a>
+      <a href="#watch">观看入口</a>
+      <a href="#cats">主题分类</a>
+      <a href="#guide">观看须知</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn');
+  var nav=document.getElementById('mainnav');
+  if(btn&&nav){
+    btn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+    });
+  }
+  var q=document.getElementById('q'),cat=document.getElementById('cat');
+  var rows=[].slice.call(document.querySelectorAll('#list .row'));
+  var empty=document.getElementById('empty');
+  function apply(){
+    var kw=(q.value||'').trim().toLowerCase();
+    var c=cat.value;
+    var shown=0;
+    rows.forEach(function(r){
+      var okC=!c||r.getAttribute('data-cat')===c;
+      var text=(r.getAttribute('data-k')+' '+r.textContent).toLowerCase();
+      var okK=!kw||text.indexOf(kw)>-1;
+      var show=okC&&okK;
+      r.style.display=show?'':'none';
+      if(show)shown++;
+    });
+    empty.hidden=shown>0;
+  }
+  q.addEventListener('input',apply);
+  cat.addEventListener('change',apply);
+})();
+</script>
+</body>
+</html>
