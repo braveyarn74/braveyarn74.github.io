@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>91次元网页版-91次元网页版在线访问_次元社区入口与使用方式</title>
+<meta name="description" content="91次元网页版首页，说明网页版访问入口、账号与浏览方式、次元社区内容分区与常见使用问题，帮助你了解91次元网页版能做什么、从哪里进入。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23151a2e'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%2358e1c9' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23ff7ab6'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#12162a;
+    --ink-2:#1c2240;
+    --paper:#f5f6fb;
+    --card:#ffffff;
+    --teal:#12b39c;
+    --teal-deep:#0b7f71;
+    --pink:#ff5f9e;
+    --muted:#5b6280;
+    --line:#e2e5f0;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:min(1120px,92vw);margin:0 auto;}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(18,22,42,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .bar{
+    display:flex;align-items:center;gap:22px;
+    padding:12px 0;
+  }
+  .logo{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+  .logo .mark{width:38px;height:38px;flex:0 0 auto;}
+  .logo .name{
+    color:#fff;font-weight:800;font-size:17px;letter-spacing:.5px;white-space:nowrap;
+  }
+  nav.main{
+    display:flex;gap:6px;margin-left:auto;flex-wrap:wrap;
+  }
+  nav.main a{
+    color:#c9cfe6;font-size:14.5px;padding:7px 12px;border-radius:999px;
+    transition:.2s;
+  }
+  nav.main a:hover{color:#fff;background:rgba(255,255,255,.1);}
+  .btn-enter{
+    background:linear-gradient(120deg,var(--teal),#37d6b6);
+    color:#062a25!important;font-weight:700;
+  }
+  .btn-enter:hover{filter:brightness(1.07);background:linear-gradient(120deg,var(--teal),#37d6b6);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      radial-gradient(900px 420px at 85% -10%,rgba(255,95,158,.28),transparent 60%),
+      radial-gradient(760px 380px at 8% 0%,rgba(18,179,156,.30),transparent 62%),
+      var(--ink);
+    color:#fff;
+    padding:56px 0 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:auto 0 0 0;height:70px;
+    background:linear-gradient(to bottom,transparent,var(--paper));
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+    position:relative;z-index:2;
+  }
+  .tag{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:1px;color:#9ff0e2;
+    border:1px solid rgba(159,240,226,.35);
+    padding:4px 12px;border-radius:999px;margin-bottom:18px;
+  }
+  h1{
+    font-size:clamp(28px,4.2vw,44px);
+    line-height:1.25;margin:0 0 16px;font-weight:900;letter-spacing:1px;
+  }
+  h1 .hl{
+    background:linear-gradient(90deg,#5ff0d8,#ff9ec2);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lead{
+    color:#c6cde6;font-size:16px;margin:0 0 26px;max-width:36em;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
+  .cta{
+    display:inline-flex;align-items:center;gap:8px;
+    background:linear-gradient(120deg,var(--teal),#3ee0bd);
+    color:#04241f;font-weight:800;font-size:15px;
+    padding:12px 24px;border-radius:12px;
+    box-shadow:0 12px 26px -12px rgba(18,179,156,.8);
+    transition:.2s;
+  }
+  .cta:hover{transform:translateY(-1px);}
+  .cta.ghost{
+    background:transparent;color:#e7ebf8;border:1px solid rgba(255,255,255,.28);
+    box-shadow:none;font-weight:600;
+  }
+  .cta.ghost:hover{background:rgba(255,255,255,.08);}
+  .dl{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:14px;color:#a7b0cf;border:1px dashed rgba(255,255,255,.25);
+    padding:10px 18px;border-radius:12px;
+    pointer-events:none;cursor:default;
+  }
+  .hero-stats{
+    display:flex;gap:26px;margin-top:34px;flex-wrap:wrap;
+  }
+  .hero-stats div{font-size:13px;color:#8f98b8;}
+  .hero-stats strong{display:block;font-size:20px;color:#fff;font-weight:800;letter-spacing:.5px;}
+  .orb-box{position:relative;display:flex;justify-content:center;}
+  .orb-box svg{width:100%;max-width:340px;height:auto;}
+
+  /* ---------- section base ---------- */
+  section{padding:56px 0;}
+  .sec-head{margin-bottom:28px;max-width:44em;}
+  .sec-head .eyebrow{
+    font-size:12.5px;letter-spacing:2px;color:var(--teal-deep);font-weight:700;
+    text-transform:uppercase;margin-bottom:8px;
+  }
+  h2{
+    font-size:clamp(21px,2.6vw,27px);margin:0 0 10px;font-weight:800;letter-spacing:.4px;
+  }
+  .sec-head p{margin:0;color:var(--muted);font-size:15px;}
+
+  /* ---------- cards ---------- */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;transition:.22s;
+  }
+  .card:hover{border-color:#c8d0e8;box-shadow:0 18px 34px -26px rgba(18,22,42,.5);transform:translateY(-2px);}
+  .card .ico{
+    width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(140deg,#e8fbf6,#eef0fb);margin-bottom:14px;
+  }
+  .card h3{margin:0 0 8px;font-size:17px;font-weight:800;}
+  .card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.8;}
+  .card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:14px;}
+  .card ul li{margin:4px 0;}
+
+  /* ---------- zones / list ---------- */
+  .zones{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .zone-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .zone{
+    display:flex;gap:16px;align-items:flex-start;
+    padding:18px 20px;border-radius:14px;background:#f8f9fe;border:1px solid #eceff8;
+  }
+  .zone .num{
+    flex:0 0 auto;width:34px;height:34px;border-radius:10px;
+    display:grid;place-items:center;font-weight:800;font-size:14px;
+    background:var(--ink);color:#5ff0d8;
+  }
+  .zone h3{margin:0 0 4px;font-size:15.5px;font-weight:800;}
+  .zone p{margin:0;font-size:14px;color:var(--muted);}
+
+  /* ---------- steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s;}
+  .step{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 20px;position:relative;
+  }
+  .step::before{
+    counter-increment:s;content:counter(s,decimal-leading-zero);
+    font-size:13px;font-weight:800;color:var(--pink);letter-spacing:1px;
+  }
+  .step h3{margin:6px 0 8px;font-size:16px;font-weight:800;}
+  .step p{margin:0;font-size:14px;color:var(--muted);}
+
+  /* ---------- faq ---------- */
+  .faq{background:var(--ink);color:#e9ecf7;border-radius:0;}
+  .faq h2{color:#fff;}
+  .faq .sec-head p{color:#9aa3c2;}
+  .faq details{
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+    border-radius:12px;padding:16px 20px;margin-bottom:12px;
+  }
+  .faq details[open]{background:rgba(255,255,255,.08);}
+  .faq summary{
+    cursor:pointer;font-weight:700;font-size:15.5px;list-style:none;
+    display:flex;justify-content:space-between;gap:16px;align-items:center;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+";color:#5ff0d8;font-weight:800;font-size:18px;}
+  .faq details[open] summary::after{content:"−";}
+  .faq details p{margin:12px 0 0;color:#b9c1dc;font-size:14.5px;}
+
+  /* ---------- footer ---------- */
+  footer.site{
+    background:#0d1120;color:#8d96b5;padding:40px 0 30px;font-size:14px;
+  }
+  .foot-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start;}
+  .foot-brand{max-width:30em;}
+  .foot-brand .name{color:#fff;font-weight:800;font-size:16px;margin-bottom:8px;}
+  .foot-brand p{margin:0;line-height:1.8;}
+  .foot-links{display:flex;flex-wrap:wrap;gap:10px 22px;}
+  .foot-links a{color:#a9b2d0;}
+  .foot-links a:hover{color:#5ff0d8;}
+  .foot-bottom{
+    margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:13px;color:#6e779a;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:30px;}
+    .orb-box{order:-1;max-width:230px;margin:0 auto;}
+    .grid-3,.grid-2,.zone-list,.steps{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    body{font-size:15.5px;}
+    .bar{flex-wrap:wrap;gap:10px;padding:10px 0;}
+    nav.main{margin-left:0;width:100%;justify-content:flex-start;gap:2px;}
+    nav.main a{padding:6px 10px;font-size:13.5px;}
+    .hero{padding:36px 0 48px;}
+    .hero-stats{gap:18px;}
+    .grid-3,.grid-2,.zone-list,.steps{grid-template-columns:1fr;}
+    section{padding:42px 0;}
+    .card{padding:20px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="91次元网页版 首页">
+      <svg class="mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="16" fill="#1c2240"/>
+        <circle cx="32" cy="32" r="16" fill="none" stroke="#5ff0d8" stroke-width="4"/>
+        <circle cx="32" cy="32" r="6" fill="#ff5f9e"/>
+        <circle cx="32" cy="10" r="2.6" fill="#5ff0d8"/>
+      </svg>
+      <span class="name">91次元网页版</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#intro">网页版说明</a>
+      <a href="#zones">内容分区</a>
+      <a href="#steps">访问方式</a>
+      <a href="#faq">常见问题</a>
+      <a class="btn-enter" href="#steps">进入网页版</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">次元社区 · 网页端入口</span>
+        <h1><span class="hl">91次元网页版</span></h1>
+        <p class="lead">91次元网页版是面向次元爱好者的网页端访问入口。打开浏览器即可进入，无需另行安装客户端；在这里可以先了解网页版能做什么、内容怎么分区、账号与浏览方式如何安排，再决定是否进一步使用。</p>
+        <div class="hero-actions">
+          <a class="cta" href="#steps">查看访问方式
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="cta ghost" href="#zones">浏览内容分区</a>
+          <a class="dl" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>浏览器直达</strong>无需安装客户端</div>
+          <div><strong>多分区浏览</strong>按兴趣进入栏目</div>
+          <div><strong>账号可选</strong>登录后保留记录</div>
+        </div>
+      </div>
+      <div class="orb-box" aria-hidden="true">
+        <svg viewBox="0 0 320 320" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5ff0d8"/><stop offset="1" stop-color="#3a7bff"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ff5f9e"/><stop offset="1" stop-color="#ffb35f"/>
+            </linearGradient>
+          </defs>
+          <circle cx="160" cy="160" r="118" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1.5"/>
+          <circle cx="160" cy="160" r="86" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1.5"/>
+          <ellipse cx="160" cy="160" rx="126" ry="46" fill="none" stroke="url(#g1)" stroke-width="3" transform="rotate(-24 160 160)"/>
+          <ellipse cx="160" cy="160" rx="126" ry="46" fill="none" stroke="url(#g2)" stroke-width="3" transform="rotate(30 160 160)"/>
+          <circle cx="160" cy="160" r="42" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+          <text x="160" y="167" text-anchor="middle" font-size="20" font-weight="800" fill="#ffffff" font-family="PingFang SC,Microsoft YaHei,sans-serif">91</text>
+          <circle cx="42" cy="196" r="6" fill="#5ff0d8"/>
+          <circle cx="278" cy="126" r="6" fill="#ff5f9e"/>
+          <circle cx="212" cy="34" r="4" fill="#ffffff" opacity=".8"/>
+          <circle cx="96" cy="286" r="4" fill="#ffffff" opacity=".5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">About</div>
+        <h2>91次元网页版是什么</h2>
+        <p>先把定位说清楚：它是一个网页端访问入口，而不是需要单独下载的软件。理解这一点，能帮助你在使用前做出合适的选择。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2" stroke="#0b7f71" stroke-width="1.8"/><path d="M8 21h8" stroke="#0b7f71" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>浏览器内运行</h3>
+          <p>91次元网页版在常见桌面与移动浏览器中打开即可使用，页面结构适配不同屏幕宽度，手机上同样可以完整浏览主要栏目。</p>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="3.6" stroke="#0b7f71" stroke-width="1.8"/><path d="M4.5 20c1.2-3.6 4-5.4 7.5-5.4S18.3 16.4 19.5 20" stroke="#0b7f71" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>账号状态可选</h3>
+          <p>可以先以游客状态浏览公开内容；需要保存偏好或浏览记录时，再按页面提示完成账号相关操作，两种状态都能进入内容页。</p>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h7v12H4zM13 6h7v12h-7z" stroke="#0b7f71" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>分区清晰</h3>
+          <p>内容按次元主题划分栏目，进入后可按分区逐层查找，减少在无关内容之间来回跳转的时间，浏览路径更有方向感。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="zones" id="zones">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Zones</div>
+        <h2>91次元网页版的内容分区</h2>
+        <p>分区的作用是给浏览一个起点。下表按常见兴趣方向组织，具体栏目以页面实际呈现为准。</p>
+      </div>
+      <div class="zone-list">
+        <div class="zone"><span class="num">01</span><div><h3>综合推荐区</h3><p>汇集近期更新与热门条目，适合第一次进入 91次元网页版 时先逛一圈，快速判断内容是否符合自己的兴趣。</p></div></div>
+        <div class="zone"><span class="num">02</span><div><h3>分类浏览区</h3><p>按题材、风格等维度分门别类，想找特定方向的内容时从这里进入，比逐个翻推荐更省时间。</p></div></div>
+        <div class="zone"><span class="num">03</span><div><h3>条目详情页</h3><p>每个条目有独立页面，集中展示简介与相关信息，便于在决定是否深入浏览前先做判断。</p></div></div>
+        <div class="zone"><span class="num">04</span><div><h3>个人中心</h3><p>登录后可查看自己的浏览记录与偏好设置，让下次使用 91次元网页版 时能更快回到关注的内容。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">How to access</div>
+        <h2>如何访问91次元网页版</h2>
+        <p>访问流程本身不复杂，按下面四步走即可。遇到页面加载缓慢时，优先检查网络与浏览器版本。</p>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>打开浏览器</h3><p>使用较新版本的 Chrome、Edge、Safari 或主流手机浏览器，过旧的版本可能影响页面正常显示。</p></div>
+        <div class="step"><h3>进入入口地址</h3><p>在地址栏输入正确的 91次元网页版 入口地址，确认协议与域名无误后再回车，避免误入相似名称的页面。</p></div>
+        <div class="step"><h3>选择浏览方式</h3><p>先以游客身份浏览公开栏目；需要记录偏好时，再按页面提示完成登录相关步骤。</p></div>
+        <div class="step"><h3>按分区深入</h3><p>从推荐区或分类区进入条目详情页，逐层浏览，遇到感兴趣的条目可以加入自己的关注列表。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Notes</div>
+        <h2>使用91次元网页版时的几点注意</h2>
+        <p>以下几条来自网页端使用的常见情况，属于经验层面的提醒，不涉及任何具体数据承诺。</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>网络与加载</h3>
+          <p>网页版依赖实时加载，网络波动时首屏可能变慢。可先等待片刻或刷新页面；若长期无法打开，多半是入口地址有变，应回到官方渠道核对，而不是反复尝试旧链接。</p>
+        </article>
+        <article class="card">
+          <h3>账号与隐私</h3>
+          <p>涉及账号信息的操作只在页面内进行，不要向第三方提供账号或验证码。公共设备上使用 91次元网页版 后，记得退出登录并清理浏览记录。</p>
+        </article>
+        <article class="card">
+          <h3>移动端体验</h3>
+          <p>手机浏览器访问时，页面会按屏幕宽度重排，卡片改为单列，导航收拢为可换行排列。横屏竖屏都能阅读，长文段落保持舒适行长。</p>
+        </article>
+        <article class="card">
+          <h3>内容判断</h3>
+          <p>分区与推荐只是入口，具体内容是否合适仍需自己判断。遇到与描述不符的页面，直接返回上一级重新选择栏目即可。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>91次元网页版常见问题</h2>
+        <p>把最常被问到的几件事集中回答，减少重复摸索。</p>
+      </div>
+      <details open>
+        <summary>91次元网页版需要下载安装吗？</summary>
+        <p>不需要。网页版直接在浏览器中打开使用，本页提供的“下载”入口目前为占位状态，暂不可用；日常访问请以浏览器入口为准。</p>
+      </details>
+      <details>
+        <summary>手机上能用91次元网页版吗？</summary>
+        <p>可以。移动端浏览器访问时会自动适配屏幕宽度，导航、卡片和正文均按小屏重排，首屏优先展示主题文字与主要入口。</p>
+      </details>
+      <details>
+        <summary>不登录能浏览内容吗？</summary>
+        <p>公开栏目通常可以先浏览。登录更多是为了保存浏览记录与偏好设置，是否登录可按自己的使用习惯决定。</p>
+      </details>
+      <details>
+        <summary>页面打不开怎么办？</summary>
+        <p>先确认网络正常、浏览器版本较新，再核对入口地址是否准确。若仍无法打开，应通过官方渠道获取最新地址，不要轻信来源不明的跳转链接。</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="name">91次元网页版</div>
+        <p>91次元网页版首页，介绍网页端访问方式、内容分区与常见使用问题，帮助访问者用浏览器进入次元社区并找到感兴趣的内容。</p>
+      </div>
+      <nav class="foot-links" aria-label="页尾导航">
+        <a href="#intro">网页版说明</a>
+        <a href="#zones">内容分区</a>
+        <a href="#steps">访问方式</a>
+        <a href="#faq">常见问题</a>
+        <a href="#top">回到顶部</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© 91次元网页版 · 本页为网页端访问说明首页</span>
+      <span>请通过官方渠道获取最新入口地址</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
