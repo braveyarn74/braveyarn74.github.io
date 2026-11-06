@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秘密研究所好好学习天天向上-秘密研究所学习资料_天天向上打卡与学习记录</title>
+<meta name="description" content="秘密研究所好好学习天天向上是一个围绕学习资料归档、每日打卡与学习记录整理的主题首页，提供学习清单、打卡方法与资料索引，帮助访问者把好好学习天天向上落实到每天的具体行动。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2440'/%3E%3Cpath d='M18 44V22l14-6 14 6v22l-14 6z' fill='none' stroke='%23f2c14e' stroke-width='3'/%3E%3Ccircle cx='32' cy='31' r='5' fill='%23f2c14e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b2440;
+  --ink-soft:#3a4566;
+  --paper:#f7f4ec;
+  --card:#ffffff;
+  --gold:#f2c14e;
+  --gold-deep:#c99a26;
+  --teal:#2f6f6a;
+  --line:#e2dccd;
+  --muted:#6c7385;
+  --radius:14px;
+  --maxw:1120px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--teal);text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3{line-height:1.3;margin:0;font-weight:700;}
+p{margin:0 0 1em;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+
+/* header */
+.site-header{
+  background:var(--ink);
+  color:#f4f1e8;
+  border-bottom:3px solid var(--gold);
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;padding:14px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px;color:#f4f1e8;}
+.brand:hover{text-decoration:none;}
+.brand svg{flex:none;}
+.brand-text{
+  font-size:19px;font-weight:800;letter-spacing:.5px;
+  line-height:1.25;
+}
+.brand-text small{display:block;font-size:11px;font-weight:400;letter-spacing:2px;color:var(--gold);}
+nav.main-nav ul{
+  list-style:none;display:flex;gap:22px;margin:0;padding:0;flex-wrap:wrap;
+}
+nav.main-nav a{color:#e7e3d6;font-size:14.5px;}
+nav.main-nav a:hover{color:var(--gold);text-decoration:none;}
+
+/* hero */
+.hero{
+  background:linear-gradient(160deg,#202b4d 0%,#1b2440 55%,#16203a 100%);
+  color:#f4f1e8;
+  position:relative;
+  overflow:hidden;
+  padding:56px 0 64px;
+}
+.hero::after{
+  content:"";
+  position:absolute;inset:auto -120px -160px auto;width:420px;height:420px;
+  background:radial-gradient(circle,rgba(242,193,78,.18),transparent 65%);
+  border-radius:50%;pointer-events:none;
+}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);
+  gap:44px;align-items:center;position:relative;z-index:1;
+}
+.hero .eyebrow{
+  display:inline-block;font-size:12.5px;letter-spacing:2px;color:var(--gold);
+  border:1px solid rgba(242,193,78,.45);border-radius:999px;padding:4px 14px;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(26px,3.6vw,40px);
+  letter-spacing:.5px;
+  margin-bottom:18px;
+  color:#fff;
+}
+.hero .lead{color:#cdd3e2;font-size:16.5px;max-width:34em;margin-bottom:26px;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:999px;font-weight:700;font-size:15px;
+  transition:transform .15s ease,background .15s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-1px);}
+.btn-primary{background:var(--gold);color:#221c0a;}
+.btn-primary:hover{background:#ffd268;}
+.btn-ghost{border:1px solid rgba(244,241,232,.4);color:#f4f1e8;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+.hero-figure{
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(242,193,78,.22);
+  border-radius:20px;padding:22px;
+}
+.hero-figure svg{display:block;width:100%;height:auto;}
+.hero-figure p{font-size:13px;color:#aab2c8;margin:14px 0 0;text-align:center;}
+
+/* sections */
+section{padding:58px 0;}
+.section-head{margin-bottom:32px;max-width:46em;}
+.section-head h2{font-size:clamp(21px,2.6vw,27px);margin-bottom:10px;}
+.section-head p{color:var(--muted);margin:0;}
+.tag{
+  display:inline-block;font-size:12px;letter-spacing:1.5px;color:var(--gold-deep);
+  font-weight:700;margin-bottom:8px;
+}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 22px;display:flex;flex-direction:column;
+  box-shadow:0 1px 0 rgba(27,36,64,.03);
+}
+.card .icon{
+  width:44px;height:44px;border-radius:12px;background:#fdf6e2;
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+}
+.card h3{font-size:17.5px;margin-bottom:10px;}
+.card p{font-size:14.5px;color:var(--ink-soft);margin:0 0 12px;}
+.card .meta{font-size:13px;color:var(--muted);margin-top:auto;}
+
+/* checklist */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start;}
+.checklist{list-style:none;margin:0;padding:0;}
+.checklist li{
+  display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line);font-size:15px;
+}
+.checklist li:last-child{border-bottom:none;}
+.checklist .num{
+  flex:none;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--gold);
+  font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px;
+}
+.panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;
+}
+.panel h3{font-size:17px;margin-bottom:14px;}
+.panel p{font-size:14.5px;color:var(--ink-soft);}
+.panel ul{margin:0;padding-left:20px;font-size:14.5px;color:var(--ink-soft);}
+.panel ul li{margin-bottom:8px;}
+
+/* notes / filter */
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:26px;}
+.toolbar input[type="search"]{
+  flex:1;min-width:200px;padding:11px 16px;border:1px solid var(--line);border-radius:999px;
+  font-size:14.5px;background:#fff;color:var(--ink);font-family:inherit;
+}
+.toolbar input[type="search"]:focus{outline:2px solid rgba(47,111,106,.35);outline-offset:1px;}
+.filter-btn{
+  padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;
+  font-size:14px;cursor:pointer;color:var(--ink-soft);font-family:inherit;
+}
+.filter-btn.active{background:var(--ink);color:var(--gold);border-color:var(--ink);}
+.note-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.note{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+}
+.note .kicker{font-size:12px;letter-spacing:1.5px;color:var(--teal);font-weight:700;}
+.note h3{font-size:16.5px;margin:8px 0 10px;}
+.note p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+.empty-msg{display:none;padding:24px;color:var(--muted);font-size:14.5px;}
+
+/* download */
+.download-box{
+  background:var(--ink);color:#f4f1e8;border-radius:20px;padding:40px;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;
+}
+.download-box h2{font-size:22px;margin-bottom:10px;color:#fff;}
+.download-box p{color:#c6cddd;font-size:14.5px;margin:0;max-width:38em;}
+.btn-download{
+  background:var(--gold);color:#221c0a;pointer-events:none;opacity:.9;
+}
+
+/* footer */
+.site-footer{background:#141b30;color:#9aa3ba;padding:38px 0 30px;font-size:14px;}
+.footer-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.site-footer strong{color:#e7e3d6;display:block;margin-bottom:8px;font-size:15px;}
+.site-footer a{color:#b9c1d4;}
+.site-footer a:hover{color:var(--gold);}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;gap:20px;flex-wrap:wrap;}
+.copyright{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);font-size:13px;color:#78829c;}
+
+@media (max-width:900px){
+  .hero-grid,.split,.download-box{grid-template-columns:1fr;}
+  .cards{grid-template-columns:1fr 1fr;}
+  .note-grid{grid-template-columns:1fr;}
+  .download-box{padding:30px 24px;}
+}
+@media (max-width:620px){
+  body{font-size:15.5px;}
+  .cards{grid-template-columns:1fr;}
+  .hero{padding:40px 0 48px;}
+  .header-inner{padding:12px 16px;}
+  nav.main-nav ul{gap:16px;}
+  section{padding:44px 0;}
+  .brand-text{font-size:16.5px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="返回首页顶部">
+      <svg width="38" height="38" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#f2c14e"/>
+        <path d="M18 44V22l14-6 14 6v22l-14 6z" fill="none" stroke="#1b2440" stroke-width="3"/>
+        <circle cx="32" cy="31" r="5" fill="#1b2440"/>
+      </svg>
+      <span class="brand-text">秘密研究所好好学习天天向上<small>STUDY ARCHIVE</small></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#archive">资料索引</a></li>
+        <li><a href="#method">打卡方法</a></li>
+        <li><a href="#notes">学习记录</a></li>
+        <li><a href="#download">资料下载</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">每日一页 · 稳扎稳打</span>
+        <h1>秘密研究所好好学习天天向上</h1>
+        <p class="lead">这里把“好好学习天天向上”拆成可执行的小步骤：一份按主题整理的资料索引、一套能坚持的每日打卡方法，以及可以随时回看的学习记录。不追求一次学很多，只追求每天都有推进。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#archive">查看资料索引</a>
+          <a class="btn btn-ghost" href="#method">了解打卡方法</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <svg viewBox="0 0 320 220" role="img" aria-label="书桌、台灯与打卡日历的插画">
+          <rect x="20" y="150" width="280" height="10" rx="5" fill="#f2c14e" opacity=".55"/>
+          <rect x="52" y="96" width="86" height="54" rx="6" fill="#f4f1e8" transform="rotate(-6 52 96)"/>
+          <rect x="60" y="108" width="70" height="4" rx="2" fill="#1b2440" opacity=".45"/>
+          <rect x="60" y="120" width="54" height="4" rx="2" fill="#1b2440" opacity=".3"/>
+          <rect x="60" y="132" width="62" height="4" rx="2" fill="#1b2440" opacity=".3"/>
+          <rect x="150" y="72" width="110" height="78" rx="8" fill="#ffffff"/>
+          <rect x="150" y="72" width="110" height="20" rx="8" fill="#2f6f6a"/>
+          <g fill="#1b2440" opacity=".25">
+            <rect x="162" y="102" width="14" height="14" rx="3"/>
+            <rect x="184" y="102" width="14" height="14" rx="3"/>
+            <rect x="206" y="102" width="14" height="14" rx="3"/>
+            <rect x="228" y="102" width="14" height="14" rx="3"/>
+            <rect x="162" y="124" width="14" height="14" rx="3"/>
+            <rect x="184" y="124" width="14" height="14" rx="3"/>
+          </g>
+          <g fill="#f2c14e">
+            <rect x="206" y="102" width="14" height="14" rx="3"/>
+            <rect x="228" y="124" width="14" height="14" rx="3"/>
+          </g>
+          <path d="M244 46l0 22M244 46l-8 12M244 46l8 12" stroke="#f2c14e" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <p>图：资料索引与每日打卡，是本站的两条主线。</p>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <section id="archive">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">资料索引</span>
+        <h2>先找到该学什么，再决定学多久</h2>
+        <p>秘密研究所好好学习天天向上的资料按用途分成三类，每类只解决一个问题，避免在大量标题之间来回挑选。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" fill="none" stroke="#c99a26" stroke-width="2"/><path d="M8 9h8M8 13h6" stroke="#c99a26" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>基础打底</h3>
+          <p>面向刚入门的访问者，包含名词解释、常见误区与最小知识框架。适合每天读一小节，读完能用自己的话复述。</p>
+          <span class="meta">建议节奏：每天 20 分钟</span>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9m5 10V5m5 14v-7m5 7V8" stroke="#c99a26" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>专项练习</h3>
+          <p>按主题归组的小题量与练习清单，强调做完立即对照思路，而不是反复抄写答案。练习量按周安排，可自行增删。</p>
+          <span class="meta">建议节奏：每周 3 次</span>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="#c99a26" stroke-width="2"/><path d="M12 8v4l3 2" stroke="#c99a26" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>回顾复盘</h3>
+          <p>把一周学过的东西用一页纸重写一遍，标出仍然卡住的地方。复盘记录留在本站，下次接着看，不必从零开始。</p>
+          <span class="meta">建议节奏：每周日一次</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method" style="background:#efeadd;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">打卡方法</span>
+        <h2>把好好学习天天向上变成每天十分钟</h2>
+        <p>方法本身不复杂，难的是持续。下面四步是本站推荐的最小流程，先把流程跑顺，再考虑加量。</p>
+      </div>
+      <div class="split">
+        <ol class="checklist">
+          <li><span class="num">1</span><div><strong>选一个小目标</strong><br>每天只选一个能在十分钟内完成的小任务，写下来再开始，避免一边学一边改计划。</div></li>
+          <li><span class="num">2</span><div><strong>固定时间与位置</strong><br>同一时间段、同一张桌子，减少“今天要不要学”的犹豫，让开始动作变成习惯。</div></li>
+          <li><span class="num">3</span><div><strong>留下一条记录</strong><br>写一句今天学到什么、哪里没懂。记录不必长，但要具体，方便日后回看。</div></li>
+          <li><span class="num">4</span><div><strong>每周回看一次</strong><br>把一周记录连起来读，找出重复卡住的地方，下周一优先处理。</div></li>
+        </ol>
+        <div class="panel">
+          <h3>打卡时容易忽略的细节</h3>
+          <ul>
+            <li>任务写在纸上或文档里，比只记在脑中更容易执行。</li>
+            <li>中断一两天不必补课，直接接上当天任务即可。</li>
+            <li>记录里写清“卡在哪一步”，比写“今天学了”更有用。</li>
+            <li>每周复盘只看一次，不必每天翻旧账。</li>
+            <li>资料索引随时可查，不必一次全部读完。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTES -->
+  <section id="notes">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">学习记录</span>
+        <h2>近期留下的记录片段</h2>
+        <p>下面是几位访问者在秘密研究所好好学习天天向上的记录摘录，按主题分类，可用关键词筛选。</p>
+      </div>
+      <div class="toolbar" role="search">
+        <input type="search" id="noteSearch" placeholder="输入关键词筛选记录，例如：复盘、基础、练习" aria-label="筛选学习记录">
+        <button class="filter-btn active" data-filter="all" type="button">全部</button>
+        <button class="filter-btn" data-filter="基础" type="button">基础</button>
+        <button class="filter-btn" data-filter="练习" type="button">练习</button>
+        <button class="filter-btn" data-filter="复盘" type="button">复盘</button>
+      </div>
+      <div class="note-grid" id="noteGrid">
+        <article class="note" data-tags="基础 复盘">
+          <span class="kicker">记录 · 基础</span>
+          <h3>把名词解释抄成自己的话</h3>
+          <p>第一次读基础资料时只画线，第二遍强迫自己合上页面复述。发现有三个概念说不清，回看后补上，这一节才算过关。</p>
+        </article>
+        <article class="note" data-tags="练习">
+          <span class="kicker">记录 · 练习</span>
+          <h3>练习量减半，正确率反而上升</h3>
+          <p>原来一次做二十题，做完就累。改成一次十题、当场对思路，错的题隔天再做一遍，一周后同类题基本不再错。</p>
+        </article>
+        <article class="note" data-tags="复盘">
+          <span class="kicker">记录 · 复盘</span>
+          <h3>一页纸复盘比长篇笔记好用</h3>
+          <p>周日用一页纸重写本周内容，只写结构和仍卡住的地方。翻回来看时，比几十页笔记更快找回状态。</p>
+        </article>
+        <article class="note" data-tags="基础 练习">
+          <span class="kicker">记录 · 基础</span>
+          <h3>先跑通十分钟流程</h3>
+          <p>一开始计划每天一小时，第三天就停了。后来改成每天十分钟，连续两周没断，才慢慢加时间。</p>
+        </article>
+      </div>
+      <p class="empty-msg" id="emptyMsg">没有匹配的记录，换一个关键词试试。</p>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="wrap">
+      <div class="download-box">
+        <div>
+          <h2>下载打卡与复盘模板</h2>
+          <p>模板包含每日任务栏、记录栏与每周复盘页，可打印也可在文档里填写。配合秘密研究所好好学习天天向上的资料索引使用，先跑通一周再调整。</p>
+        </div>
+        <a class="btn btn-download" href="#" download data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <strong>秘密研究所好好学习天天向上</strong>
+      <p style="margin:0;max-width:34em;">围绕学习资料索引、每日打卡与复盘记录的主题首页，帮助访问者把学习计划落到每天的具体行动上。</p>
+    </div>
+    <div>
+      <strong>站内导航</strong>
+      <ul class="footer-links">
+        <li><a href="#archive">资料索引</a></li>
+        <li><a href="#method">打卡方法</a></li>
+        <li><a href="#notes">学习记录</a></li>
+        <li><a href="#download">资料下载</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copyright">
+    <p style="margin:0;">秘密研究所好好学习天天向上 · 学习记录与打卡方法 · 页面内容按实际使用场景整理</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var search = document.getElementById('noteSearch');
+  var grid = document.getElementById('noteGrid');
+  var notes = Array.prototype.slice.call(grid.querySelectorAll('.note'));
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.filter-btn'));
+  var emptyMsg = document.getElementById('emptyMsg');
+  var activeFilter = 'all';
+
+  function apply(){
+    var q = (search.value || '').trim().toLowerCase();
+    var visible = 0;
+    notes.forEach(function(note){
+      var tags = (note.getAttribute('data-tags') || '').toLowerCase();
+      var text = note.textContent.toLowerCase();
+      var matchFilter = activeFilter === 'all' || tags.indexOf(activeFilter.toLowerCase()) !== -1;
+      var matchQuery = !q || text.indexOf(q) !== -1;
+      var show = matchFilter && matchQuery;
+      note.style.display = show ? '' : 'none';
+      if(show) visible++;
+    });
+    emptyMsg.style.display = visible ? 'none' : 'block';
+  }
+
+  search.addEventListener('input', apply);
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeFilter = btn.getAttribute('data-filter');
+      apply();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
